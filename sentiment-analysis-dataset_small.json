@@ -19,13 +19,13 @@
     }, 
     {
         "ItemID": "215", 
-        "SentimentText": "watch E3 @MCMudkips - Will do ", 
+        "SentimentText": "Will do ", 
         "Sentiment": "1", 
         "SentimentSource": "Sentiment140"
     }, 
     {
         "ItemID": "212", 
-        "SentimentText": "Think again   Talvez seja do a anfase na cifra. Masateno: &quot;Security is a chain; it's as strong as the weakest link", 
+        "SentimentText": "Think again   Talvez seja do a anfase na cifra. Masateno: Security is a chain; it's as strong as the weakest link", 
         "Sentiment": "1", 
         "SentimentSource": "Sentiment140"
     }, 
@@ -37,7 +37,7 @@
     }, 
     {
         "ItemID": "210", 
-        "SentimentText": "I am nothing of the kind and everything of the sort http://tr.im/mLsn", 
+        "SentimentText": "I am nothing of the kind and everything of the sort", 
         "Sentiment": "1", 
         "SentimentSource": "Sentiment140"
     }, 

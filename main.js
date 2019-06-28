@@ -1,60 +1,35 @@
-/* JSON.stringify() 
- * yaitu untuk mengubah dari object ke json pada javascript
- *
- * JSON.parse()
- * yaitu untuk mengubah dari json ke object pada javascript
- * 
- * json_encode()
- * yaitu mengubah array associative menjadi json pada php
- * 
- * json_decode()
- * yaitu mengubah json menjadi array associative pada php jika parameter ditambahkan true
- */
+let item, sentiment, sentimentSource, sentimentText;
 
-// ajax || vanilla javascript
-function getJSONLocal(){
+document.getElementById('getData').addEventListener('click', function(){
 
   let xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function(){
 
     if(xhr.readyState == 4 && xhr.status == 200){
-      let mahasiswa = JSON.parse(this.responseText);
-      let outputItem = '';
+      let data = JSON.parse(this.responseText);
+      let output = '';
 
-      for(let i = 0; i < mahasiswa.length; i++){
-        let ItemID = mahasiswa[i].ItemID;
-        let Sentiment = mahasiswa[i].Sentiment;
-        let SentimentSource = mahasiswa[i].SentimentSource;
-        let SentimentText = mahasiswa[i].SentimentText;
+      for(let i = 0; i < data.length; i++){
+        item = data[i].ItemID;
+        sentiment = data[i].Sentiment;
+        sentimentSource = data[i].SentimentSource;
+        sentimentText = data[i].SentimentText;
 
-        let item = ItemID;
-        let sentiment = Sentiment;
-        let sentimentSource = SentimentSource;
-        let sentimentText = SentimentText;
+        console.log('Text : ', sentimentText);
 
-        console.log('Item ID : ', item);
-        console.log('Sentiment : ', sentiment);
-
-        if(sentiment == 1){
-          console.log('Sentiment...');
-        } else {
-          console.log('Tidak Sentiment...');
-        }
-        
-        outputItem += `<ul>
+        output += `<ul>
                       <li>Item ID : ${item}</li>
                       <li>Sentiment : ${sentiment}</li>
                       <li>Sentiment Source : ${sentimentSource}</li>
                       <li>Sentiment Text : ${sentimentText}</li>
-                      </ul>`;
+                    </ul>
+                    `;
         
       }
-      document.getElementById('itemId').innerHTML = outputItem;
+      document.getElementById('itemId').innerHTML = output;
     }
   }
   xhr.open('GET', 'sentiment-analysis-dataset_small.json', true);
   xhr.send();
-}
-
-getJSONLocal(); // jalankan function
+});
