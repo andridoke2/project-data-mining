@@ -1,0 +1,23 @@
+{
+  "name": "Project_Data_Mining",
+  "version": "1.0.0",
+  "description": "Topik : Sentiment Analysis",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andridoke2/Project_Data_Mining.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andridoke2/Project_Data_Mining/issues"
+  },
+  "homepage": "https://github.com/andridoke2/Project_Data_Mining#readme",
+  "dependencies": {
+    "brain.js": "^1.6.1"
+  }
+}
