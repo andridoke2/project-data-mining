@@ -5,12 +5,12 @@ var classifier = new BrainJSClassifier();
 // const data = require('./data/sentiment-clean-dataset.json');
 const data = require('./data/data.json');
 
-classifier.addDocument('I am very happy today', 'Positive');
-classifier.addDocument('I am not happy today', 'Negative');
-classifier.addDocument('I hate you', 'Negative');
-classifier.addDocument('I love you', 'Positive');
-classifier.addDocument('Today is very nice out', 'Positive');
-classifier.addDocument('Today it is very rainy out', 'Negative');
+// classifier.addDocument('I am very happy today', 'Positive');
+// classifier.addDocument('I am not happy today', 'Negative');
+// classifier.addDocument('I hate you', 'Negative');
+// classifier.addDocument('I love you', 'Positive');
+// classifier.addDocument('Today is very nice out', 'Positive');
+// classifier.addDocument('Today it is very rainy out', 'Negative');
 
 for(let i = 0; i < data.length; i++){
   classifier.addDocument(data[i].SentimentText, data[i].Sentiment);

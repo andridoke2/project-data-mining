@@ -84,11 +84,15 @@
       "Sentiment": "Positive"
   }, 
   { 
-      "SentimentText": " ..... hot choco is the best!", 
+      "SentimentText": "hot choco is the best!", 
       "Sentiment": "Positive"
   },
   {
       "SentimentText": "you really stupid",
       "Sentiment": "Negative"
+  },
+  {
+      "SentimentText": "i love you",
+      "Sentiment": "Positive"
   }
 ]
