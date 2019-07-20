@@ -10,14 +10,14 @@ network.train([
   { input: [1, 1, 1], output: [1] },
 ]);
 
-const output = network.run([0, 0, 0]);
+const output = network.run([1, 1, 1]);
 
 if(output > 0.70){
-  console.log('1');
   console.log(`Probabilitas : ${output}`);
+  console.log('Output : 1');
 } else {
-  console.log('0');
   console.log(`Probabilitas : ${output}`);
+  console.log('Output : 0');
 }
 
 // console.log(`Probabilitas : ${output}`);

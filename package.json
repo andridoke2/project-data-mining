@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/andridoke2/Project_Data_Mining#readme",
   "dependencies": {
-    "brain.js": "^1.6.1"
+    "brain.js": "^1.6.1",
+    "natural-brain": "^0.3.2"
   }
 }
