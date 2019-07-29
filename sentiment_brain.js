@@ -11,10 +11,20 @@ const trainingData = data.map(item => ({
   output: item.Sentiment
 }));
 
-network.train(trainingData, {
-  iterations: 20000
+// network.train(trainingData, {
+//   iterations: 20000
+// });
+
+// const output = network.run('I really hate you');
+
+// console.log(`Result : ${output}`);
+
+const net = new brain.recurrent.LSTM();
+net.train(trainingData, {
+  iterations: 500,
+  errorThresh: 0.011,
+  log: (stats) => console.log(stats)
 });
 
-const output = network.run('I really hate you');
-
+const output = net.run('fuck tweet');
 console.log(`Result : ${output}`);
